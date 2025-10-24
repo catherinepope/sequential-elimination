@@ -111,51 +111,59 @@ const TopicSelectorTool = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-6 text-center text-blue-700">
-        Journal Topic Selector Tool
-      </h1>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-12 px-4">
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Journal Topic Selector
+          </h1>
+          <p className="text-gray-600">Find the perfect topic for your next article</p>
+        </div>
 
       {currentPhase === "input" && (
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-4">
-            Phase 1: Enter Your Potential Topics
-          </h2>
-          <p className="mb-4 text-gray-700">
-            Enter all potential topics you're considering for your journal
-            article.
-          </p>
-
-          {topics.map((topic) => (
-            <div key={topic.id} className="flex items-center mb-2">
-              <input
-                type="text"
-                value={topic.title}
-                onChange={(e) => handleTopicChange(topic.id, e.target.value)}
-                placeholder="Enter a potential topic"
-                className="flex-grow p-2 border rounded mr-2"
-              />
-              <button
-                onClick={() => removeTopic(topic.id)}
-                className="p-2 bg-red-500 text-white rounded hover:bg-red-600"
-              >
-                Remove
-              </button>
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+              <span className="text-indigo-600 font-bold">1</span>
             </div>
-          ))}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-800">Enter Your Potential Topics</h2>
+              <p className="text-sm text-gray-500">List all topics you're considering</p>
+            </div>
+          </div>
 
-          <div className="flex justify-between mt-4">
-            <button
-              onClick={addTopic}
-              className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              Add Another Topic
-            </button>
+          <div className="space-y-3">
+            {topics.map((topic) => (
+              <div key={topic.id} className="flex items-center gap-3">
+                <input
+                  type="text"
+                  value={topic.title}
+                  onChange={(e) => handleTopicChange(topic.id, e.target.value)}
+                  placeholder="Enter a potential topic..."
+                  className="flex-grow px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 outline-none transition-all"
+                />
+                <button
+                  onClick={() => removeTopic(topic.id)}
+                  className="px-4 py-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-colors font-medium"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-between mt-8 gap-4">
             <button
               onClick={goToRatingPhase}
-              className="p-2 bg-green-500 text-white rounded hover:bg-green-600"
+              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all font-semibold shadow-lg shadow-indigo-200"
             >
-              Proceed to Rating
+              Proceed to Rating →
+            </button>
+            <button
+              onClick={addTopic}
+              className="px-8 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors font-semibold"
+            >
+              + Add Another Topic
             </button>
           </div>
         </div>
@@ -383,6 +391,7 @@ const TopicSelectorTool = () => {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 };

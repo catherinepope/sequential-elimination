@@ -1,6 +1,6 @@
 # Journal Topic Selector
 
-A React-based tool that helps you choose the best topic for your next article using a systematic sequential elimination process.
+A Vue-based tool that helps you choose the best topic for your next article using a systematic sequential elimination process.
 
 ## Overview
 
@@ -27,9 +27,9 @@ The Journal Topic Selector uses a three-phase approach to help you objectively e
 
 ## Technology Stack
 
-- React 19
+- Vue 3
 - Tailwind CSS
-- React Scripts (Create React App)
+- Vite
 
 ## Local Development
 
@@ -46,10 +46,10 @@ The Journal Topic Selector uses a three-phase approach to help you objectively e
 
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
 ## Building for Production
 
@@ -59,7 +59,7 @@ To create a production build:
 npm run build
 ```
 
-This creates an optimized production build in the `build` folder.
+This creates an optimized production build in the `dist` folder.
 
 ## Deployment
 
@@ -68,7 +68,7 @@ This creates an optimized production build in the `build` folder.
 This app is configured for Netlify deployment with the included `netlify.toml` file:
 
 - **Build command**: `npm run build`
-- **Publish directory**: `build`
+- **Publish directory**: `dist`
 - **Node version**: 18
 
 Simply connect your GitHub repository to Netlify for automatic deployments on every push.

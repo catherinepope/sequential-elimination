@@ -32,7 +32,8 @@
             />
             <button
               @click="removeTopic(topic.id)"
-              class="px-4 py-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-colors font-medium"
+              :disabled="topics.length <= 1"
+              class="px-4 py-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-red-50"
             >
               Remove
             </button>

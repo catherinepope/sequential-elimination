@@ -49,7 +49,7 @@
           </button>
           <button
             @click="addTopic"
-            class="px-8 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors font-semibold"
+            class="px-8 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-all font-semibold shadow-md hover:shadow-lg"
           >
             + Add Another Topic
           </button>

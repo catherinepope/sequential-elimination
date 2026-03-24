@@ -5,7 +5,7 @@
         <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
           Journal Topic Selector
         </h1>
-        <p class="text-gray-600">Find the perfect topic for your next article</p>
+        <p class="text-gray-600">Choose a topic for your next journal article</p>
       </div>
 
       <!-- Input Phase -->

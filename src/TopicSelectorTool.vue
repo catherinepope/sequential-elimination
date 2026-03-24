@@ -243,23 +243,6 @@
             Start Over
           </button>
         </div>
-
-        <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded">
-          <h3 class="text-lg font-semibold mb-2">Next Steps</h3>
-          <p class="text-gray-700">
-            For your top topics, consider these next actions:
-          </p>
-          <ul class="list-disc ml-6 mt-2">
-            <li class="mb-1">
-              Conduct preliminary literature reviews for each
-            </li>
-            <li class="mb-1">Sketch potential outlines or frameworks</li>
-            <li class="mb-1">Consult with colleagues or mentors</li>
-            <li class="mb-1">
-              Consider practical constraints (time, resources, data access)
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>

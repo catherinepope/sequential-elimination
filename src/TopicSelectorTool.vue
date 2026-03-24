@@ -75,7 +75,7 @@
                 (1-10)
               </th>
               <th class="p-2 text-center border">
-                Available Data
+                Available Material
                 <br />
                 (1-10)
               </th>
@@ -86,6 +86,11 @@
               </th>
               <th class="p-2 text-center border">
                 Originality
+                <br />
+                (1-10)
+              </th>
+              <th class="p-2 text-center border">
+                Timescale
                 <br />
                 (1-10)
               </th>
@@ -130,6 +135,15 @@
                   class="w-full p-1 border rounded"
                 />
               </td>
+              <td class="p-2 border">
+                <input
+                  type="number"
+                  min="1"
+                  max="10"
+                  v-model.number="topic.timescale"
+                  class="w-full p-1 border rounded"
+                />
+              </td>
             </tr>
           </tbody>
         </table>
@@ -169,9 +183,10 @@
             <tr class="bg-gray-100">
               <th class="p-2 text-left border">Topic</th>
               <th class="p-2 text-center border">Expertise</th>
-              <th class="p-2 text-center border">Available Data</th>
+              <th class="p-2 text-center border">Available Material</th>
               <th class="p-2 text-center border">Relevance</th>
               <th class="p-2 text-center border">Originality</th>
+              <th class="p-2 text-center border">Timescale</th>
               <th class="p-2 text-center border">Total Score</th>
             </tr>
           </thead>
@@ -182,6 +197,7 @@
               <td class="p-2 border text-center">{{ topic.data }}</td>
               <td class="p-2 border text-center">{{ topic.relevance }}</td>
               <td class="p-2 border text-center">{{ topic.originality }}</td>
+              <td class="p-2 border text-center">{{ topic.timescale }}</td>
               <td class="p-2 border text-center font-bold">
                 {{ calculateScore(topic) }}
               </td>
@@ -260,6 +276,7 @@ const topics = ref([
     data: 0,
     relevance: 0,
     originality: 0,
+    timescale: 0,
     isEliminated: false,
   },
 ])
@@ -279,6 +296,7 @@ const addTopic = async () => {
     data: 0,
     relevance: 0,
     originality: 0,
+    timescale: 0,
     isEliminated: false,
   })
 
@@ -310,7 +328,7 @@ const goToRatingPhase = () => {
 
 // Calculate total score for a topic
 const calculateScore = (topic) => {
-  return topic.expertise + topic.data + topic.relevance + topic.originality
+  return topic.expertise + topic.data + topic.relevance + topic.originality + topic.timescale
 }
 
 // Go back to input phase
@@ -327,7 +345,7 @@ const eliminateTopics = () => {
   // Check if any topics have been rated
   const hasRatings = topics.value.some((topic) => calculateScore(topic) > 0)
   if (!hasRatings) {
-    errorMessage.value = 'Please rate your topics before proceeding. Each topic needs ratings for Expertise, Available Data, Relevance, and Originality.'
+    errorMessage.value = 'Please rate your topics before proceeding. Each topic needs ratings for Expertise, Available Material, Relevance, Originality, and Timescale.'
     return
   }
 
@@ -368,6 +386,7 @@ const resetTool = () => {
       data: 0,
       relevance: 0,
       originality: 0,
+      timescale: 0,
       isEliminated: false,
     },
   ]

@@ -7,18 +7,19 @@ A Vue-based tool that helps you choose the best topic for your next article usin
 The Journal Topic Selector uses a three-phase approach to help you objectively evaluate and narrow down potential writing topics:
 
 1. **Input Phase**: Enter all potential topics you're considering
-2. **Rating Phase**: Rate each topic on four key criteria (1-10 scale):
+2. **Rating Phase**: Rate each topic on five key criteria (1-10 scale):
    - **Expertise**: Your level of knowledge about the topic
-   - **Available Data**: Accessibility of research and supporting information
+   - **Available Material**: Accessibility of research and supporting information
    - **Relevance**: Current importance and audience interest
    - **Originality**: Uniqueness and fresh perspective
+   - **Timescale**: Ability to complete project
 3. **Results Phase**: View your top topics after eliminating the bottom 50% by total score
 
 ## Features
 
 - Clean, intuitive interface with gradient design
 - Add/remove topics dynamically
-- Systematic rating system across four key criteria
+- Systematic rating system across five key criteria
 - Automatic scoring and ranking
 - Sequential elimination of lower-scoring topics
 - Visual feedback showing kept vs. eliminated topics
@@ -76,7 +77,7 @@ Simply connect your GitHub repository to Netlify for automatic deployments on ev
 ## How to Use
 
 1. **Enter Topics**: Start by listing all potential topics you're considering for your article
-2. **Rate Each Topic**: Evaluate each topic on the four criteria using a 1-10 scale
+2. **Rate Each Topic**: Evaluate each topic on the five criteria using a 1-10 scale
 3. **Review Results**: The tool automatically eliminates the bottom 50% and shows you the top-ranked topics
 4. **Make Your Decision**: Use the ranked results and suggested next steps to choose your final topic
 

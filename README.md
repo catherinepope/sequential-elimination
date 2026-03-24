@@ -12,7 +12,7 @@ The Journal Topic Selector uses a three-phase approach to help you objectively e
    - **Available Material**: Accessibility of research and supporting information
    - **Relevance**: Current importance and audience interest
    - **Originality**: Uniqueness and fresh perspective
-   - **Timescale**: Ability to complete project
+   - **Timescale**: Likelihood of completing article within allotted time
 3. **Results Phase**: View your top topics after eliminating the bottom 50% by total score
 
 ## Features

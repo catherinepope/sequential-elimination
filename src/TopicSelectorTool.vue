@@ -58,12 +58,26 @@
 
       <!-- Rating Phase -->
       <div v-if="currentPhase === 'rating'" class="mb-6">
-        <h2 class="text-xl font-semibold mb-4">
-          Phase 2: Rate Your Topics
-        </h2>
-        <p class="mb-4 text-gray-700">
-          Rate each topic on a scale of 1-10 for each category.
-        </p>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+            <span class="text-indigo-600 font-bold">2</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800">Rate Your Topics</h2>
+            <p class="text-sm text-gray-500">Rate each topic on a scale of 1-10 for each category</p>
+          </div>
+        </div>
+
+        <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <h3 class="text-md font-semibold mb-3 text-gray-800">Rating Criteria:</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><strong>Expertise:</strong> Your level of knowledge about the topic</li>
+            <li><strong>Available Material:</strong> Accessibility of research and supporting information</li>
+            <li><strong>Relevance:</strong> Current importance and audience interest</li>
+            <li><strong>Originality:</strong> Uniqueness and fresh perspective</li>
+            <li><strong>Timescale:</strong> Likelihood of completing article within allotted time</li>
+          </ul>
+        </div>
 
         <table class="w-full border-collapse mb-4">
           <thead>
@@ -171,12 +185,15 @@
 
       <!-- Results Phase -->
       <div v-if="currentPhase === 'results'" class="mb-6">
-        <h2 class="text-xl font-semibold mb-4">
-          Phase 3: Your Top Topics
-        </h2>
-        <p class="mb-4 text-gray-700">
-          These are your highest-rated topics after eliminating the bottom 50%.
-        </p>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+            <span class="text-indigo-600 font-bold">3</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800">Your Top Topics</h2>
+            <p class="text-sm text-gray-500">Your highest-rated topics after eliminating the bottom 50%</p>
+          </div>
+        </div>
 
         <table class="w-full border-collapse mb-6">
           <thead>
